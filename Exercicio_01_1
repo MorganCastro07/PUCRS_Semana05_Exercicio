@@ -1,0 +1,31 @@
+Faça um programa em Java que apresente o tipo de triângulo, ou seja,
+triângulo Equilátero, Isóceles ou Escaleno. Para isso, informe o valor de três lados de um triângulo.
+
+--------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Triangulo
+{
+    public static void main(String[] args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        double Lado1, Lado2, Lado3;
+        
+        System.out.println("INFORME O PRIMEIRO LADO DO TRIÂNGULO:");
+        Lado1 = dados.nextDouble();
+        System.out.println("INFORME O SEGUNDO LADO DO TRIÂNGULO:");
+        Lado2 = dados.nextDouble();
+        System.out.println("INFORME O TERCEIRO LADO DO TRIÂNGULO:");
+        Lado3 = dados.nextDouble();
+        
+        if (Lado1 == Lado2 && Lado2 == Lado3){
+            System.out.println("O TRIÂNGULO É EQUILÁTERO.");
+        }else if (Lado1 == Lado2 || Lado1 == Lado3 || Lado2 == Lado3){
+            System.out.println("O TRIÂNGULO É ISÓSCELES.");
+        }else {
+            System.out.println("O TRIÂNGULO É ESCALENO.");
+        }
+        
+    }  
+}
