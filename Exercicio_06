@@ -1,0 +1,24 @@
+Escreva um programa que encontre o quinto número maior que 1000, cuja divisão por 11 tenha resto 5. 
+O resto 5 deve ser considerado com a parte inteira do cociente, ou seja, não considera o a parte do cociente após a vírgula.
+
+-------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class QuintoMaiorNumero
+{
+    public static void main(String[] args) {
+        int contador = 0;
+        
+        for(int i=1000; i<100000; i++){
+            
+            if(i%11==5){
+                contador++;
+            }
+            if(contador==5){
+                System.out.println("O VALOR DO QUINTO MAIOR NÚMERO QUE 1000 É: " +i);
+                    break;
+            }
+        
+        }
+    }
+}
