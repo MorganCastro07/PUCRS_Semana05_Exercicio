@@ -1,0 +1,59 @@
+Elabore um programa em Java que leia a altura de uma pessoa em metros e o seu sexo (use 1 para Feminino e 2 para masculino). 
+A seguir, o programa deve escrever o peso ideal dessa pessoa, conforme descrito a seguir.
+Para homens o peso ideal corresponde a 72.7 * altura - 58. Para mulheres, use 62,1 * altura - 44,7.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class PesoIdeal
+{
+    public static void main(String[]Args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        double altura, peso;
+        int sexo;
+        
+        System.out.println("INFORME SEU SEXO: (1) FEMININO OU (2) MASCULINO");
+        sexo = dados.nextInt();
+        
+        System.out.println("INFORME A SUA ALTURA (EX: 1,68)");
+        altura = dados.nextDouble();
+        
+        peso = (sexo == 1) ? 62.1 * altura - 44.7 : 72.7 * altura - 58;
+        
+        System.out.println("O PESO IDEAL PARA A PESSOA: " + peso + " Kg.");
+        
+    }
+    
+}
+
+-----------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class PesoIdeal_01
+{
+    public static void main(String[]Args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        double altura, peso;
+        int sexo;
+        
+        System.out.println("INFORME SEU SEXO: (1) FEMININO OU (2) MASCULINO");
+        sexo = dados.nextInt();
+        
+        System.out.println("INFORME A SUA ALTURA (EX: 1,68)");
+        altura = dados.nextDouble();
+        
+        peso = 0;
+        
+         if (sexo == 1) {
+            peso = 62.1 * altura - 44.7;
+        }else if (sexo == 2) {
+            peso = 72.7 * altura - 58;
+        }
+        
+        System.out.println("O PESO IDEAL PARA A PESSOA: " + peso + " Kg.");
+    }
+}
