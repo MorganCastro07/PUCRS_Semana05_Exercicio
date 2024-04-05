@@ -1,0 +1,68 @@
+Desenvolva um programa em Java que calcule o volume de uma garrafa. O casco de uma garrafa aproxima-se a dois cilindros de raios r1 e r2 e de alturas h1 e h2,
+unidos por um cone de altura h3. Solicite ao usuário os dados necessários. Calcule e escreva o volume da garrafa, sabendo que o volume de um 
+cilindro é calculado por vcl = πr2h e que o volume de um cone é dado pela fórmula de acordo com a Geometria Espacial.
+
+----------------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class VolumeGarrafa_01
+{
+    public static void main(String[] args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        double R1, R2, H1, H2, H3, Vol_Cilindro1, Vol_Cilindro2, Vol_Cone, VolumeTotal;
+    
+        System.out.println("INFORME O RAIO(R1) DO PRIMEIRO CILINDRO:");
+        R1 = dados.nextDouble();
+        System.out.println("INFORME A ALTURA(H1) DO PRIMEIRO CILINDRO:");
+        H1 = dados.nextDouble();
+    
+        System.out.println("INFORME O RAIO(R2) DO SEGUNDO CILINDRO:");
+        R2 = dados.nextDouble();
+        System.out.println("INFORME A ALTURA(H2) DO SEGUNDO CILINDRO:");
+        H2 = dados.nextDouble();
+    
+        System.out.println("INFORME A ALTURA(H3) DO CONE:");
+        H3 = dados.nextDouble();
+    
+        Vol_Cilindro1 = Math.PI * Math.pow(R1,2)* H1;
+        Vol_Cilindro2 = Math.PI * Math.pow(R2,2)* H2;
+        Vol_Cone = (1.0/3.0) * Math.PI * Math.pow(R1,2) * H3;
+    
+        VolumeTotal = Vol_Cilindro1 + Vol_Cilindro2 + Vol_Cone;
+    
+        System.out.println("O VOLUME TOTAL DA GARRAFA: " + VolumeTotal);
+        
+    }
+    
+}
+
+----------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class VolumeGarrafa
+{
+    public static void main(String[] args){
+        
+        double R1, R2, H1, H2, H3, Vol_Cilindro1, Vol_Cilindro2, Vol_Cone, VolumeTotal;
+    
+        R1 = 5;
+        H1 = 3;
+    
+        R2 = 7;
+        H2 = 5;
+    
+        H3 = 14;
+    
+        Vol_Cilindro1 = Math.PI * Math.pow(R1,2)* H1;
+        Vol_Cilindro2 = Math.PI * Math.pow(R2,2)* H2;
+        Vol_Cone = (1.0/3.0) * Math.PI * Math.pow(R1,2) * H3;
+    
+        VolumeTotal = Vol_Cilindro1 + Vol_Cilindro2 + Vol_Cone;
+    
+        System.out.println("O VOLUME TOTAL DA GARRAFA: " + VolumeTotal);
+        
+    }
+    
+}
