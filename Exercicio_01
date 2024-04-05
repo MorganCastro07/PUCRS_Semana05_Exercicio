@@ -1,0 +1,29 @@
+Implemente um programa em Java que lê um único valor inteiro de 4 dígitos. 
+Esse programa deve descrever um inteiro que corresponde ao valor lido na ordem inversa.
+Por exemplo: 1234 ------ 4321
+
+---------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class ValorInverso
+{
+     public static void main(String[]args){
+        
+        Scanner dados = new Scanner(System.in);
+        
+        int numero, n1, n2, n3, n4;
+    
+        System.out.println("DIGITE O NUMERO INTEIRO EX: 1234");
+        numero = dados.nextInt();
+        
+        n1 = numero/1000; // (milhares)
+        n2 = numero % 1000/100; //(centenas)
+        n3 = numero % 100 / 10; // (dezena)
+        n4 = numero % 10; // (unidades)
+        
+        System.out.println("RESULTADO INVERTIDO: " + n4 + n3 + n2 + n1);
+          
+    }
+          
+}
